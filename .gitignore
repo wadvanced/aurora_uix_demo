@@ -35,3 +35,8 @@ aurora_uix_demo-*.tar
 npm-debug.log
 /assets/node_modules/
 
+# Intellij
+/.idea/
+*.iml
+
+

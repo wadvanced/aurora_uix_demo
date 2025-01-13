@@ -1,6 +1,5 @@
 defmodule AuroraUixDemoWeb.Router do
   use AuroraUixDemoWeb, :router
-  use AuroraUixWeb.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -20,8 +19,18 @@ defmodule AuroraUixDemoWeb.Router do
 
     get "/", PageController, :home
 
-    register(AuroraUixDemo.GeneralLedger.Account)
-    #live "/accounts", AuroraUixDemoWeb.AccountLive.Index, :index
+    live "/accounts", AccountLive.Aurora.Index, :index
+    # live "/accounts", AccountLive.Index, :index
+
+    live "/accounts/new", AccountLive.Aurora.Index, :new
+    live "/accounts/:id/edit", AccountLive.Aurora.Index, :edit
+    #live "/accounts/new", AccountLive.Index, :new
+    #live "/accounts/:id/edit", AccountLive.Index, :edit
+
+    live "/accounts/:id", AccountLive.Show, :show
+    live "/accounts/:id/show/edit", AccountLive.Show, :edit
+
+
   end
 
   # Other scopes may use custom stacks.
