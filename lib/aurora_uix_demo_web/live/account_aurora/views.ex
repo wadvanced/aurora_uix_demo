@@ -3,8 +3,8 @@ defmodule AuroraUixDemoWeb.AccountLive.Aurora.Views do
   alias AuroraUixDemo.GeneralLedger
   alias AuroraUixDemo.GeneralLedger.Account
 
-  module(AuroraUixDemoWeb, GeneralLedger, Account, :index,
-    fields: [AuroraUix.Field.new(field: :number), AuroraUix.Field.new(field: :description)]
-  )
+
+  auix_schema_config :account, schema: Account, context: GeneralLedger
+  auix_create_ui()
 
 end
