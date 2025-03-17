@@ -19,16 +19,13 @@ defmodule AuroraUixDemoWeb.Router do
 
     get "/", PageController, :home
 
-    live "/accounts", AccountLive.Aurora.Views.Index, :index
-    # live "/accounts", AccountLive.Index, :index
+    live "/gl_accounts", AccountLive.Aurora.Views.Account.Index, :index
 
-    live "/accounts/new", AccountLive.Aurora.Views.Index, :new
-    live "/accounts/:id/edit", AccountLive.Aurora.Views.Index, :edit
-    # live "/accounts/new", AccountLive.Index, :new
-    # live "/accounts/:id/edit", AccountLive.Index, :edit
+    live "/gl_accounts/new", AccountLive.Aurora.Views.Account.Index, :new
+    live "/gl_accounts/:id/edit", AccountLive.Aurora.Views.Account.Index, :edit
 
-    live "/accounts/:id", AccountLive.Show, :show
-    live "/accounts/:id/show/edit", AccountLive.Show, :edit
+    live "/gl_accounts/:id", AccountLive.Aurora.Views.Account.Show, :show
+    live "/gl_accounts/:id/show/edit", AccountLive.Aurora.Views.Account.Show, :edit
   end
 
   # Other scopes may use custom stacks.

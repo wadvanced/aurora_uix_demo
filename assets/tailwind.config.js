@@ -9,7 +9,8 @@ module.exports = {
   content: [
     "./js/**/*.js",
     "../lib/aurora_uix_demo_web.ex",
-    "../lib/aurora_uix_demo_web/**/*.*ex"
+    "../lib/aurora_uix_demo_web/**/*.*ex",
+    "../../aurora_uix/**/*.ex"
   ],
   theme: {
     extend: {

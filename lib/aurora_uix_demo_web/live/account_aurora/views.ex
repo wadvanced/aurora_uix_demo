@@ -4,7 +4,7 @@ defmodule AuroraUixDemoWeb.AccountLive.Aurora.Views do
   alias AuroraUixDemo.GeneralLedger.Account
 
 
-  auix_schema_config :account, schema: Account, context: GeneralLedger
+  auix_resource_config :account, schema: Account, context: GeneralLedger
   auix_create_ui()
 
 end

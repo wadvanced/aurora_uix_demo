@@ -17,6 +17,9 @@ defmodule AuroraUixDemo.GeneralLedger do
       [%Account{}, ...]
 
   """
+  def list_gl_accounts do
+    Repo.all(Account)
+  end
   def list_accounts do
     Repo.all(Account)
   end
