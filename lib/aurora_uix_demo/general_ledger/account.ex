@@ -2,10 +2,6 @@ defmodule AuroraUixDemo.GeneralLedger.Account do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias AuroraUixDemo.GeneralLedger.AccountReceivable
-
-  @primary_key {:id, Ecto.UUID, autogenerate: true}
-
   schema "gl_accounts" do
     field :code, :string          # Unique account code (e.g., "1000", "4001")
     field :name, :string          # Account name (e.g., "Cash", "Revenue")
@@ -19,7 +15,7 @@ defmodule AuroraUixDemo.GeneralLedger.Account do
     field :notes, :string          # Additional remarks
 
     timestamps(type: :utc_datetime)
-    has_many :transactions, Transactions
+    has_many :transactions, AuroraUixDemo.GeneralLedger.Transaction
   end
 
   @doc false

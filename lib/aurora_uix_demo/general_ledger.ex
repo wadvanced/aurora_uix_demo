@@ -20,9 +20,10 @@ defmodule AuroraUixDemo.GeneralLedger do
   def list_gl_accounts do
     Repo.all(Account)
   end
-  def list_accounts do
-    Repo.all(Account)
-  end
+
+#  def list_accounts do
+#    Repo.all(Account)
+#  end
 
   @doc """
   Gets a single account.
