@@ -19,7 +19,7 @@ defmodule AuroraUixDemoWeb.AccountLive.FormComponent do
         phx-change="validate"
         phx-submit="save"
       >
-        <.input field={@form[:number]} type="text" label="Number" />
+        <.input field={@form[:code]} type="text" label="Code" />
         <.input field={@form[:description]} type="text" label="Description" />
         <:actions>
           <.button phx-disable-with="Saving...">Save Account</.button>

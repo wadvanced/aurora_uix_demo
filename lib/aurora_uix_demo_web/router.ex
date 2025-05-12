@@ -19,13 +19,21 @@ defmodule AuroraUixDemoWeb.Router do
 
     get "/", PageController, :home
 
+    ## Uix live
     live "/gl_accounts", Aurora.GeneralLedger.Account.Index, :index
-
     live "/gl_accounts/new", Aurora.GeneralLedger.Account.Index, :new
     live "/gl_accounts/:id/edit", Aurora.GeneralLedger.Account.Index, :edit
 
     live "/gl_accounts/:id", Aurora.GeneralLedger.Account.Show, :show
     live "/gl_accounts/:id/show/edit", Aurora.GeneralLedger.Account.Show, :edit
+
+    ## Normal live
+    live "/accounts", AccountLive.Index, :index
+    live "/accounts/new", AccountLive.Index, :new
+    live "/accounts/:id/edit", AccountLive.Index, :edit
+
+    live "/accounts/:id", AccountLive.Show, :show
+    live "/accounts/:id/show/edit", AccountLive.Show, :edit
   end
 
   # Other scopes may use custom stacks.

@@ -35,4 +35,3 @@ defmodule AuroraUixDemo.GeneralLedger.Account do
     |> unique_constraint(:code)
   end
 end
-

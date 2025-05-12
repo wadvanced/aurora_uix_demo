@@ -14,10 +14,11 @@ defmodule AuroraUixDemoWeb.CoreComponents do
 
   Icons are provided by [heroicons](https://heroicons.com). See `icon/1` for usage.
   """
+  use Gettext, backend: AuroraUixDemoWeb.Gettext
   use Phoenix.Component
 
   alias Phoenix.LiveView.JS
-  import AuroraUixDemoWeb.Gettext
+
 
   @doc """
   Renders a modal.

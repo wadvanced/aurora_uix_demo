@@ -32,7 +32,8 @@ defmodule AuroraUixDemo.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:aurora_uix, git: "https://github.com/wadvanced/aurora_uix.git"},
+      {:aurora_uix, "~> 0.1", repo: "local"},
+      {:aurora_ctx, "~> 0.1"},
       {:phoenix, "~> 1.7.15"},
       {:phoenix_ecto, "~> 4.5"},
       {:ecto_sql, "~> 3.10"},

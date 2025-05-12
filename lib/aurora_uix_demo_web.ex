@@ -42,8 +42,8 @@ defmodule AuroraUixDemoWeb do
         formats: [:html, :json],
         layouts: [html: AuroraUixDemoWeb.Layouts]
 
+      use Gettext, backend: AuroraUixDemoWeb.Gettext
       import Plug.Conn
-      import AuroraUixDemoWeb.Gettext
 
       unquote(verified_routes())
     end

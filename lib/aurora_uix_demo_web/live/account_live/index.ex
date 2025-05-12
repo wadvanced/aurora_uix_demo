@@ -6,7 +6,7 @@ defmodule AuroraUixDemoWeb.AccountLive.Index do
 
   @impl true
   def mount(_params, _session, socket) do
-    {:ok, stream(socket, :accounts, GeneralLedger.list_accounts())}
+    {:ok, stream(socket, :accounts, GeneralLedger.list_gl_accounts())}
   end
 
   @impl true
